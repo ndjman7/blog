@@ -7,10 +7,7 @@
         <div class="col-md-6">
             <form action="" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                <input type="text" name="title">
-                <textarea type="text" name="content">
-                </textarea>
-                <input type="file" name="thumbnail">
+                {{ form.as_p }}
                 <input type="submit">
             </form>
         </div>

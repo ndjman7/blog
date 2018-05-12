@@ -6,13 +6,26 @@
     <div class="container">
         <div class="col-md-4"></div>
         <div class="col-md-4">
+
             <h1>{{ blog.title }}</h1>
+            <p>작성자 - {{ blog.user.username }} 님</p>
             <p>작성일 - {{ blog.created_date }}</p>
             <p>{{ blog.content }}</p>
-
+            <p>
+                <img src="{{ blog.thumbnail.url }}" alt="">
+            </p>
             <p>
                 <a href="{% url 'blog:list' %}">뒤로</a>
             </p>
+            {% if request.user == blog.user %}
+            <p>
+                <form action="{% url 'blog:delete' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="blog_pk" value="{{ blog.pk }}">
+                <button type="submit">삭제</button>
+                </form>
+            </p>
+            {% endif %}
         </div>
         <div class="col-md-4"></div>
     </div>
