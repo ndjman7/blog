@@ -1,3 +1,19 @@
+# TODO
+
+- forms
+	- Query String
+	- Form data
+		- Form tag
+	- Django Form
+
+
+- 정적 파일
+	- Static files
+	- Media files
+
+- Authentication
+
+
 # 요구사항
 
 ## git clone
@@ -15,3 +31,7 @@
 
 ## 테스트
 `python manage.py runserver`
+
+    'django.contrib.sessions.middleware.SessionMiddleware',
+'django.contrib.auth.middleware.AuthenticationMiddleware',
+
