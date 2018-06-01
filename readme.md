@@ -23,15 +23,11 @@
 `python3 -m venv venv`
 
 ## 패키지 설치
-`pip install django`
-`pip install Pillow`
+`pip install -r requirements.txt`
 
 ## 가상환경 진입
 `source venv/bin/activate`
 
 ## 테스트
 `python manage.py runserver`
-
-    'django.contrib.sessions.middleware.SessionMiddleware',
-'django.contrib.auth.middleware.AuthenticationMiddleware',
 
